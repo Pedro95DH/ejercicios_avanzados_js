@@ -3,3 +3,10 @@
 // Que la función use el parametro para simular una tirada de dado y retornar el resultado.
 
 // Si no se te ocurre como hacer un numero aleatorio no te preocupes. Busca información sobre la función de JavaScript Math.random()
+const dice = 8;
+
+function rollDice(dado){
+    return Math.floor(Math.random() * (dado) + 1);
+}
+
+console.log(rollDice(dice));

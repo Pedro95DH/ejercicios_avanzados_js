@@ -21,7 +21,7 @@ const mainCharacters = [
   "Obi-Wan",
 ];
 
-console.log(findArrayIndex(mainCharacters, "Luke"));
+console.log(findArrayIndex(mainCharacters, "Luke"),"\n");
 
 // 2. Usando la función anterior benefíciate de poder conocer el indice del array para crear una función llamada removeItem que, pasándole un array y un texto como parámetros (los mismos parámetros que en el anterior ejercicio), llame a la función anteriormente creada findArrayIndex y obtén el indice para posteriormente usar la función de javascript .splice() para eliminar el elemento del array.
 
@@ -32,7 +32,21 @@ console.log(findArrayIndex(mainCharacters, "Luke"));
 // De nuevo haz varios ejemplos para practicar y comprueba que funcionan correctamente.
 
 
+//HACIENDOLO DE MANERA RUDIMENTARIA:
 
+function removeItem(main, text) {
+  const newMain = [];
+  for (const character of main) {
+    if (character !== text){
+      newMain.push(character);
+    }
+  }
+  return newMain;
+}
+
+console.log(removeItem(mainCharacters, "Anakin"),"\n");
+
+//HACIENDOLA LO MAS RESUMIDO POSIBLE:
 
 mainCharacters.splice(findArrayIndex(mainCharacters, "Anakin"), 1);
 

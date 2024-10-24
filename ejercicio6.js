@@ -10,3 +10,13 @@ const fantasticFour = [
   "La mujer invisible",
   "La cosa",
 ];
+
+function swap(heroes, firstIndex, secondIndex){
+ let firstWord = heroes[firstIndex];
+ let secondWord = heroes[secondIndex];
+ heroes.splice(firstIndex, 1, secondWord);
+ heroes.splice(secondIndex, 1, firstWord);
+ return heroes;
+}
+
+console.log(swap(fantasticFour, 1, 3));
